@@ -2,16 +2,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package partidos;
+package personas;
 
 import java.time.LocalDate;
 /**
  *
  * @author josea
  */
-public class Partido {
-    private String local;
-    private String visitante;
-    private String estadio;
-    private localDate fecha;
+public class Persona {
+    private String nombre;
+    private String nacionalidad;
+    private LocalDate fechaNaci;
 }
