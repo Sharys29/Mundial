@@ -10,9 +10,9 @@ import java.time.LocalDate;
  * @author josea
  */
 public class Persona {
-    private String nombre;
-    private String nacionalidad;
-    private LocalDate fechaNaci;
+    protected String nombre;
+    protected String nacionalidad;
+    protected LocalDate fechaNaci;
     
     public String getNombre(){
         return this.nombre;
