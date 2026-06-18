@@ -20,7 +20,10 @@ public class Persona {
     public String getNacionalidad(){
         return this.nacionalidad;
     }
-    public LocalDate getFechaNacimiento(){
+    public LocalDate getFecha(){
+        return this.fechaNaci;
+    }
+    public LocalDate getEdad(){
         return this.fechaNaci;
     }
         
@@ -29,5 +32,12 @@ public class Persona {
         this.nacionalidad=nacionalidad;
         this.fechaNaci=fechaNaci;
     }
+
+    @Override
+    public String toString() {
+        return "Persona{" + "nombre=" + nombre + ", nacionalidad=" + nacionalidad + ", fechaNaci=" + fechaNaci + '}';
+    }
+    
+    
            
 }
