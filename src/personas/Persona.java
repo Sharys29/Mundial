@@ -1,0 +1,33 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package personas;
+
+import java.time.LocalDate;
+/**
+ *
+ * @author josea
+ */
+public class Persona {
+    private String nombre;
+    private String nacionalidad;
+    private LocalDate fechaNaci;
+    
+    public String getNombre(){
+        return this.nombre;
+    }
+    public String getNacionalidad(){
+        return this.nacionalidad;
+    }
+    public LocalDate getFechaNacimiento(){
+        return this.fechaNaci;
+    }
+        
+    public Persona(String nombre,String nacionalidad,LocalDate fechaNaci){
+        this.nombre = nombre;
+        this.nacionalidad=nacionalidad;
+        this.fechaNaci=fechaNaci;
+    }
+           
+}
