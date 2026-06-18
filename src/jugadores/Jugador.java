@@ -5,25 +5,32 @@
 package jugadores;
 
 import java.time.LocalDate;
+
 import personas.Persona;
 
 /**
  *
  * @author sharys
  */
-public class Jugador extends Persona {
-    private int numero;
-    private String posicion; 
-    
 
+
+
+
+public class Jugador extends Persona {
+   
+   private int numero;
+   private String posicion; 
+
+   //Metodo getter
     public int getNumero() {
         return numero;
-    }    
+    }
 
-    // MODO GETTER
+
     public String getPosicion() {
         return posicion;
     }
+
 
     public void setNumero(int numero) {
         this.numero = numero;
@@ -40,6 +47,6 @@ public class Jugador extends Persona {
         
     }
    
-    
-    
 }
+    
+    
