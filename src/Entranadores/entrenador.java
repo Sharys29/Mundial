@@ -2,14 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package jugadores;
+package Entranadores;
+
+import personas.Persona;
 
 /**
  *
- * @author sharys
+ * @author UTN
  */
-public class Jugador extends persona {
-    private int numero;
-    
+public class entrenador extends Persona {
     
 }
