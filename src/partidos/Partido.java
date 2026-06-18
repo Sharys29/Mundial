@@ -4,14 +4,10 @@
  */
 package partidos;
 
-import java.time.LocalDate;
 /**
  *
  * @author josea
  */
 public class Partido {
-    private String local;
-    private String visitante;
-    private String estadio;
-    private localDate fecha;
+    
 }
