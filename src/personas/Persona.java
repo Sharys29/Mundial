@@ -23,8 +23,9 @@ public class Persona {
     public LocalDate getFecha(){
         return this.fechaNaci;
     }
-    public LocalDate getEdad(){
-        return this.fechaNaci;
+    public int calcularEdad(){
+        LocalDate hoy =LocalDate.now();
+        return java.time.Period.between(fechaNaci, hoy).getYears();
     }
         
     public Persona(String nombre,String nacionalidad,LocalDate fechaNaci){
