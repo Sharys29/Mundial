@@ -4,6 +4,7 @@
  */
 package arbitros;
 
+import java.time.LocalDate;
 import personas.Persona;
 
 /**
@@ -11,5 +12,24 @@ import personas.Persona;
  * @author UTN
  */
 public class Arbitro extends Persona {
+    private String categoria;
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public Arbitro(String categoria, String nombre, String nacionalidad, LocalDate fechaNaci) {
+        super(nombre, nacionalidad, fechaNaci);
+        this.categoria = categoria;
+    }
     
+       @Override
+    public String toString() {
+        return "Arbitro{nombre=" + getNombre() + ", categoria=" + categoria + '}';
+    }
 }
+   
