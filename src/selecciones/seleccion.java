@@ -73,7 +73,7 @@ public class seleccion {
    public void eliminarJugador(Jugador jugador) {
         for (int i = 0; i < contador; i++) {
             if (jugadores[i].equals(jugador)) {
-                // Desplazar los jugadores restantes
+               
                 for (int j = i; j < contador - 1; j++) {
                     jugadores[j] = jugadores[j + 1];
                 }
