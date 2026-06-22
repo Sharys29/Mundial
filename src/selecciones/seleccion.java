@@ -12,39 +12,31 @@ import jugadores.Jugador;
  * @author UTN
  */
 public class seleccion {
+
+    private final Jugador[] Jugadores;
+    public enum grupo{
+        A,B,C,D,E,F,G,H,I
+    }
   private String     nombre;
-    private String     grupo;
+    private grupo     grupo;
     private Entrenador entrenador;
     private Jugador[]  jugadores;
+    private int contador;
 
-    public seleccion(String nombre, String grupo, Entrenador entrenador, Jugador[] jugadores) {
+    public seleccion(String nombre, grupo grupo, Entrenador entrenador, int capacidad) {
         this.nombre     = nombre;
         this.grupo      = grupo;
         this.entrenador = entrenador;
-        this.jugadores  = jugadores;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public String getGrupo() {
-        return grupo;
-    }
-
-    public Entrenador getEntrenador() {
-        return entrenador;
-    }
-
-    public Jugador[] getJugadores() {
-        return jugadores;
+        this.Jugadores = new Jugador[capacidad];
+        this.contador = 0;
+        
     }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public void setGrupo(String grupo) {
+    public void setGrupo(grupo grupo) {
         this.grupo = grupo;
     }
 
@@ -52,13 +44,50 @@ public class seleccion {
         this.entrenador = entrenador;
     }
 
-    public void setJugadores(Jugador[] jugadores) {
-        this.jugadores = jugadores;
+    public Jugador[] getJugadores() {
+        return Jugadores;
     }
 
-    @Override
+    public String getNombre() {
+        return nombre;
+    }
+
+    public grupo getGrupo() {
+        return grupo;
+    }
+
+    public Entrenador getEntrenador() {
+        return entrenador;
+    }
+
+    public int getContador() {
+        return contador;
+    }
+
+   public void agregarJugador(Jugador jugador) {
+        if (contador < jugadores.length) {
+            jugadores[contador] = jugador;
+            contador++;
+        }
+    }
+   public void eliminarJugador(Jugador jugador) {
+        for (int i = 0; i < contador; i++) {
+            if (jugadores[i].equals(jugador)) {
+                // Desplazar los jugadores restantes
+                for (int j = i; j < contador - 1; j++) {
+                    jugadores[j] = jugadores[j + 1];
+                }
+                jugadores[contador - 1] = null;
+                contador--;
+                return;
+            }
+        }
+    }
+
+      @Override
     public String toString() {
-        return "Seleccion{nombre=" + nombre + ", grupo=" + grupo + ", entrenador=" + entrenador + '}';
+        return "Seleccion{nombre=" + nombre + ", grupo=" + grupo +
+               ", entrenador=" + entrenador + ", jugadores=" + contador + '}';
     }
 }
 
